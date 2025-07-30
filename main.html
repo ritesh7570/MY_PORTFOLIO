@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritesh Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+
+    <link rel="icon" href="assests/img/connexus.jpg" type="image/icon type">
+
+     <!-- Link Swiper's CSS ........................................................ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+
+    <!-- import another html file  -->
+    <!-- <object type="text/html" data="navbar.html"></object> -->
+</head>
+<body>
+  <!-- HEADER SECTION =============================================================================================== -->
+    <header class="container_head">
+            <nav class="nav-head">
+              <a href="#container-body"><img src="assests/img/connexus.jpg" class="icon-before" alt=""></a>
+              
+                
+
+                <ul id="menu_side">
+                    <li><a href="#container-body">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#">Shoot</a></li> -->
+                    <li><a href="#skills-main">Skills</a></li>
+                    <li><a href="#achivement">Attainment</a></li>
+                    <li><a href="#project">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-circle-xmark" onclick="closemenu()"></i>
+
+
+                </ul>
+                <li class="fas1"><a href="https://drive.google.com/file/d/1RcOhpFxFIEs1eu1ugQsk7yKKKpgj6FbR/view?usp=drive_link"><i class="fa-solid fa-address-card fas1" target="_blank"></i></a></li>
+                <li class="fas1"><a href="https://www.linkedin.com/in/ritesh-kumar-919b0121b/" target="_blank"><i class="fa-brands fa-linkedin fas1"></i></a></li>
+                <li class="fas1"><a href="https://leetcode.com/u/levi_ritesh/" target="_blank"><i class="fa-solid fa-code fas1"></i></a></li>
+                <li class="fas1"><a href="https://github.com/ritesh7570" target="_blank"><i class="fa-brands fa-github fas1"></i></a></li>
+                <li class="fas1"><a href="" target="_blank"><i class="fa-brands fa-facebook fas1"></i></a></li>
+                <li class="fas1"><a href="https://mail.google.com/mail/?view=cm&to=ritesh7882@gmail.com" target="_blank"><i class="fa-solid fa-envelope fas1"></i></a></li>
+                <!-- <li><i class="fas fa-bars" ></i></li> -->
+                <li class="fas1"><img src="./assests/img/icons8-storm-100.png " style="width: 50px;height: 50px; cursor: pointer;"  onclick="openmenu()"></li>
+            
+                
+                
+                
+                
+                
+                
+
+                <!-- <div class="logo">
+                    <i class="fa-regular fa-moon"></i> -->
+                     
+
+                </div>
+              </nav>
+
+
+        </header>
+
+
+<!-- <script>
+  document.addEventListener('scroll',()=>{
+    const header=document.querySelector('container-head');
+    if (window.scrollY>0){
+      header.classList.add('scrolled');
+
+    }
+    else{
+      header.classList.remove('scrolled');
+    }
+  })
+</script> -->
+
+<!-- Scroll Property -->
+<script>
+      let sections = document.querySelectorAll("li");
+      let navlinks = document.querySelectorAll("header nav li a");
+
+      window.onscroll = () => {
+        sections.forEach((sec) => {
+          let top = window.scrollY;
+          let offset = sec.offsetTop - 150;
+          let height = sec.offsetHeight;
+          let id = sec.getAttribute("id");
+
+          if (top >= offset && top < offset + height) {
+            navlinks.forEach((links) => {
+              links.classList.remove("active");
+              document
+                .querySelector("header nav li a [hre*=' + id + ']")
+                .classList.add("active");
+            });
+          }
+        });
+      };
+    </script>
+
+<!-- Header change color  -->
+<script>
+  window.addEventListener('scroll',function () {
+    var header=document.querySelector('header');
+    header.classList.toggle("sticky",window.scrollY>0);
+    
+  })
+</script>
+
+<!-- Light mode and dark mode -->
+<!-- <script>
+  const logo = document.querySelector(".logo");
+let icon=document.getElementsByClassName("")
+
+logo.onclick = function myFunction() {
+    let element = document.body;
+    element.classList.toggle("dark");
+
+};
+</script> -->
+
+
+
+    <!-- SIDE NAVBAR===================================================================================================-->
+
+    <div class="side-nav" id="side">
+        <a href="https://drive.google.com/file/d/1RcOhpFxFIEs1eu1ugQsk7yKKKpgj6FbR/view?usp=drive_link"target="_blank" style="background-color: #565F69;">Resume<span><i class="fa-solid fa-address-card"></i></span></a>
+        <a href="https://leetcode.com/u/levi_ritesh/"target="_blank" style="background-color: #ffdf2d">LeetCode<span><img src="./assests/img/icons8-level-up-your-coding-skills-and-quickly-land-a-job-96.png" style="width: 40px; margin-top: 8px; text-align: center;"></span></a>
+        <a href="https://www.linkedin.com/in/ritesh-kumar-919b0121b/"target="_blank" style="background-color: #0040c9;">Linkedin <span><i class="fa-brands fa-linkedin-in"></i></span></a>
+        <a href="https://github.com/ritesh7570"target="_blank" style="background-color: #333333;">Github <span><i class="fa-brands fa-github"></i></span></a>
+        <a href="https://www.facebook.com/sharmendu.dey.58"target="_blank" style="background-color: #4a80f6;">Facebook<span><i
+                    class="fa-brands fa-facebook"></i></span></a>
+        <a href="https://mail.google.com/mail/?view=cm&to=ritesh7882@gmail.com "target="_blank"  style="background-color: #05c097;">Mail<span><i
+                    class="fa-solid fa-envelope"></i></span></a>
+    </div>
+
+
+    <!-- MAIN BODY========================================================================================================-->
+    <!-- left side container -->
+    <div id="container-body">
+        <div class="left-main">
+            <div class="hi">
+                <h3>Hi, myself </h3>
+            </div>
+
+            <div class="ele-main" style="color: #fff;"><span id="purple"><strong>Ritesh kumar</strong></span>
+                <div class="br-main"><span id="element"></span></div>
+                <div class="sub-br-main">
+                I’m a backend developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications and am particularly interested in backend and full-stack projects with React. I am also interested in AWS, cloud technologies, and currently learning data analytics to combine backend development with data-driven solutions.
+               </div>
+
+
+                <div class="view-proj">
+                    <a href="#project">View Work <span class="group-hover:rotate-90 duration-300"><i
+                                class="fa-solid fa-arrow-right"> </i></span></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript   typed js FOR MAIN BODY -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['I am Passionate about Backend Developer', 'My Passion is Coding 💻', 'My Passion is Photograpy 📸','Geo-politics enthusiast' ],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+
+    </script>
+
+    <script>
+        var menu_side = document.getElementById("menu_side");
+        function openmenu() {
+            menu_side.style.right = "0";
+        }
+        function closemenu() {
+            menu_side.style.right = "-1500px";
+        }
+    </script>
+
+
+
+ <!-- ABOUT ME ======================================================================================================= -->
+ <Section class="About" id="about">   
+        <div class="container-about">
+            <div class="row-about">
+                <div class="col1">
+                    <h1 class="texth1">About Me </h1><span class="texth"> 👨‍🎓</span>
+                    <p ><span id="element1"></span>
+                    </p>
+
+                    <div class="sub-table-col1">
+                      Name:  Ritesh kumar
+                      <hr class="dashed">
+                      Department:  B.Tech, IT
+                      <hr class="dashed">
+                      Age:  22
+                      
+                      <hr class="dashed">
+                      <h5>From: Patna, Bihar, India </h5><span><img class="flag" src="./assests/img/icons8-india-48.png" style="width: 30px; height: 30px;"/></span>
+                      
+              
+                      
+
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="sub-para">
+                      <ul>
+                        <li>I am passionate about building excellent responsive websites that improves the lives of those around me. I always try to integrate the solution of real life problem that I faced. 🌐</li>
+                        <li>I am currently pursuing my B.Tech (IT) prefinal year having experience of building Web using Frontend Tech Stack like Javascript | React JS and some other cool frameworks and libraries.✨</li>
+                        <li>I have built a solid foundation in software development, particularly in areas such as C++ , Java ,SQL and other development Technologies 💡</li>
+                      </ul>
+                          
+                    </div>
+                    <div class="sub-para-para">
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Qualifications</p>
+                      <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('roles')">Roles</p>
+                        <!-- <p class="tab-links" onclick="opentab('achivement')">Achivements</p> -->
+                        <p class="tab-links" onclick="opentab('activity')">Activity
+                        </p>
+
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Technical Languages </span><br>Python, HTML, CSS, Javascript</li>
+                            <li><span>Academics </span><br>SDLC, OOPS, DSA, RDBMS</li>
+                            <li><span>Libraries/Frameworks </span><br>React JS, Bootstrap</li>
+                            <li><span>Tools / Platforms </span><br>Windows, Git, GitHub, Visual Studio Code,</li>
+                            <li><span>Databases </span><br>SQL, MySQL,Oracle, MongoDB</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>HERITAGE INSTITUTE OF TECHNOLOGY  &nbsp; [Sepetember 2022 - July
+                                    2026]</span><br>Bachelors Of Information
+                                Technology Engineering</br></li>
+                            <li><span>ARMY PUBLIC SCHOOL DANAPUR &nbsp; [April 2020 - June 2021]
+                                </span><br> HIGHER SECONDARY EXAMINATION</li>
+                            <li><span> ARMY PUBLIC SCHOOL DANAPUR &nbsp; [April 2018 - May 2019]</span><br>SECONDARY
+                                EXAMINATION</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="roles">
+                        <ul>
+                            <li><span>Team Lead Connexus</span><br>Took part in Smart India Hackathon  </br></li>
+                            
+                        </ul>
+                       
+                    </div>
+
+                    <div class="tab-contents" id="activity">
+                        <ul class="act">
+                             <li>Football & Chess enthusiast ⚽♟️</li>
+                            <li>Photography 📸</li>
+                            <li>Geo-politics enthusiast 🌍</li>
+                            <li>Solo Travelling 🧳</li>
+                            <li>Creating new innovative Tech model 🔬🔨</li>
+
+                        </ul>
+                    </div>
+
+        <div class="tab-contents" id="experience">
+    <ul>
+        <li>
+            <span>Accenture | UI/UX Intern | Remote | May 2023 – July 2023</span><br>
+            Worked as a UI/UX intern, designing user interfaces and improving user experience for web applications.
+        </li>
+        <li>
+            <span>Government of Punjab | Mentor Connect Project | Dec 2023</span><br>
+            Collaborated with the Government of Punjab to develop the Mentor Connect platform during a national hackathon, focusing on connecting students with mentors and implementing real-time features.
+        </li>
+    </ul>
+</div>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </Section>
+    <hr class="rounded">
+
+    <!-- script for onclick event ABOUT ME   -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        var tablinks_s = document.getElementsByClassName('tab-links-s');   //project
+        var tabcontents_s = document.getElementsByClassName('tab-contents-s');
+
+
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tablink_p of tablinks_s) {         //project
+                tablink_p.classList.remove('active-link-s')
+            }
+
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            for (tabcontent_p of tabcontents_s) {   //project
+                tabcontent_p.classList.remove('active-tab-s')
+            }
+
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+            event.currentTarget.classList.add('active-link-s');  //project
+            document.getElementById(tabname).classList.add('active-tab-s');
+        }
+</script>
+
+
+<!-- Typed_js......................................................... -->
+   <!-- <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element1', {
+            strings: ["I'm Ritesh, nice to meet you. Please take a look around."],
+            typeSpeed: 120,
+        });
+    </script>
+  -->
+   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  let typedInstance;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Destroy existing instance if it's already running
+        if (typedInstance) {
+          typedInstance.destroy();
+        }
+
+        // Re-initialize typing effect
+        typedInstance = new Typed('#element1', {
+          strings: ["I'm Ritesh, nice to meet you. Please take a look around."],
+          typeSpeed: 120,
+          showCursor: false,
+        });
+      }
+    });
+  }, {
+    threshold: 0.5 // Trigger when 50% of the element is visible
+  });
+
+  observer.observe(document.querySelector('#element1'));
+</script>
+
+<!-- SKILLS =================================================================================================== -->
+ <Section class="skills-section " id="skills-main">
+        <span class="texth">🛠 </span><h2 class="Section_title texth1 ">SKILLS</h2> <span class="texth"> 📚</span>
+        <p class="Section-subtitle proj-subtitle">These are the Technologies I've worked with</p>
+        <div class="skills_container container grid section_border">
+
+<!-- SKILLS 1 -->
+        <div class="skills_content">
+            <h3 class="skills_title"><i class="fa-solid fa-code">  Developement Skills</i></h3>
+
+            <div class="skills_info">
+            <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-html-480.png" alt="image"> 
+<h4 class="skills_name">HTML</h4>
+                    </div>
+                    
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-css-480.png" alt="image">
+                        <h4 class="skills_name">CSS</h4> 
+
+                    </div>
+                   
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-javascript-480.png" alt="image"> 
+<h4 class="skills_name">Javascript</h4>
+                    </div>
+                 
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-react-js-480.png" alt="image"> 
+<h4 class="skills_name">React JS</h4>
+                    </div>
+                 
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-python-480.png" alt="image"> 
+                        <h4 class="skills_name">Python</h4>
+
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-java-480.png" alt="image"> 
+                        <h4 class="skills_name">Java</h4>
+
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-mongodb-480.png" alt="image"> 
+<h4 class="skills_name">MongoDb</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-my-sql-480.png" alt="image"> 
+<h4 class="skills_name">Mysql</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/material.png" alt="image"> 
+<h4 class="skills_name">Material UI</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-chakra-ui-480.png" alt="image"> 
+<h4 class="skills_name">Node Js</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-bootstrap-480.png" alt="image"> 
+<h4 class="skills_name">Bootstrap</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/excel-480.png" alt="image"> 
+<h4 class="skills_name">Excel</h4>
+                    </div>
+                    <h3 class="skills_name"></h3>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+<!-- SKILLS 2 -->
+ <div class="skills_content">
+            <h3 class="skills_title">
+ <i class="fa-solid fa-screwdriver-wrench">  Tools </i>
+            </h3>
+            <div class="skills_info">
+               
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-vs-code-480.png" alt="image"> 
+<h4 class="skills_name">VS Code</h4>
+                    </div>
+                    
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-git-480.png" alt="image"> 
+<h4 class="skills_name">Git</h4>
+                    </div>
+                    
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/npm.png" alt="image"> 
+<h4 class="skills_name">npm</h4>
+                    </div>
+                    
+                </div>
+
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/command.png" alt="image"> 
+<h4 class="skills_name">CMD</h4>
+                    </div>
+                    
+                </div>
+                <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/icons8-postman-is-the-only-complete-api-development-environment-96.png" alt="image"> 
+<h4 class="skills_name">Postman</h4>
+                    </div>
+                  </div>
+
+                  <div class="skills_data">
+                    <div class="skills_bob">
+                        <img src="assests/img/jupyter.png" alt="image"> 
+<h4 class="skills_name">Jupyter</h4>
+                    </div>
+                    
+            </div>
+ </div>
+ </div>
+    </Section>
+
+
+   
+<hr class="rounded">
+
+    <!-- ACHIVEMENT SECTION ============================================================================= -->
+    <section id="achivement"class="achive">
+        <span class="texth">🥇</span><h2 class="sub-head texth1">MY ACHIVEMENTS </h2><span class="texth">🏆</span>
+        <p class="Section-subtitle proj-subtitle">These are the Achivements that i have achived within this Four year</p>
+
+    <div class="timeline sub-head">
+        <div class="container-timeline left-timeline">
+            <div class="tooltip tooltip-left">Heritage Institute of Technology, Kolkata 
+                <br>Hack Heritage Hackathon</br></div>
+        <span><img src="assests/img/Heritage_Institute_of_Kolkata_Logo.png" /></span>
+        <div class="text-box">
+          <h2 class="ach-head">Inter College Project Competetion</h2>
+          <small>2023-2024</small>
+          <p>
+  Developed a project titled <strong>“Alumni Connect”</strong>, a platform designed to foster global connections among alumni. The application includes features like <strong>emergency donations, project collaboration, and a clean, user-friendly interface</strong> to enhance engagement and support.
+  <br><br>
+  <p>
+    <strong>Selected among the Top 25 teams out of 200+</strong> in a National Hackathon for this project.
+  </p>
+</p>
+
+          
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+
+    <div class="container-timeline right-timeline">
+        <div class="tooltip tooltip-right">Smart India Hackathon</div>
+        <span><img src="assests/img/SIH2.png" /></span>
+        <div class="text-box">
+          <p class="ach-head">Mentor Connect Platform – LPU Hackathon, Jalandhar, Punjab</p>
+<small>Dec, 2023</small>
+<p>
+  Visited <strong>Lovely Professional University</strong> for a National Hackathon where we developed <strong>Mentor Connect</strong> — a platform aimed at solving a real-world problem statement provided by the <strong>Government of Punjab</strong>.  
+  <br><br>
+  Key features included:  
+  - <strong>Group & Personal Mentorship</strong>  
+  - <strong>Gamified Quizzes for User Engagement</strong>  
+  - <strong>Referral System for Job Opportunities</strong>  
+  - <strong>Real-time Chat with Mentors</strong>  
+  - <strong>Admin Dashboard for Document Verification & Quality Control</strong>
+  <br><br>
+  🏆 <strong>Won 1st Place</strong> and received a <strong>₹50,000 cash prize</strong>.
+</p>
+   
+          <span class="right-container-arrow"></span>
+        </div>
+      </div>
+
+      <div class="container-timeline left-timeline">
+        <div class="tooltip tooltip-left">Techno India Salt lake , Kolkata</div>
+        <span><img src="assests/img/OIP.webp" /></span>
+       <div class="text-box">
+  <h2 class="ach-head">AI Ideathon – <strong>Trace Framing</strong></h2>
+  <small>March, 2024</small>
+  <p>
+    Presented an innovative idea titled <strong>Trace Framing</strong>, focused on utilizing mobile camera input to scan the terrace of a house and analyze it using AI.  
+    The system suggests suitable plants that can be grown based on environmental factors and available space, promoting sustainable urban gardening.
+    <br><br>
+    The idea was appreciated by industry mentors and judges, and we were selected among the <strong>Top 10 teams</strong> at the Ideathon.
+  </p>
+  </div>
+
+          <span class="left-container-arrow"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> 
+
+<hr class="rounded">
+
+<!--PROJECT SECTION =====================================================================================  -->
+<section id="project">
+      <div class="container-proj">
+        <span class="texth">📊 </span><h1 class="texth1">MY WORK</h1><span class="texth"> 📐</span>
+        <p class="Section-subtitle proj-subtitle">
+          These are the Projects on that I've worked
+        </p>
+        <div class="proj-links">
+          <span class="proj-item-link active" data-name="all"
+            >All Projects</span>
+          <span class="proj-item-link" data-name="react">React</span>
+          <span class="proj-item-link" data-name="javascript">Javascript</span>
+          
+        </div>
+
+        <!-- Filter section -------------------------------------------------->
+        <div class="filterable-cards">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+
+              <!-- REACTS JS PROJECTS -------------------------------------------------------------------- -->
+              <div class="swiper-slide">
+                <div class="card_filter" data-name="javascript">
+                  <div class="work">
+                    <img src="assests/img/alumni.png" />
+                    <div class="layer">
+                      <h2>ALUMNI CONNET</h2>
+                      <a href="#"
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></a>
+                      <a href="https://github.com/ritesh7570/Alumni-Portal"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- card Body------------------------------------------------- -->
+                  <div class="card-body">
+                    <h5 class="card-title">Node + Ejs</h5>
+                    <p class="card-text">
+                      Alumni Connect is a platform designed to connect alumni globally, offering features like emergency donations, project collaboration, and a clean, user-friendly interface.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Mentor Connect-->
+              <div class="swiper-slide">
+                <div class="card_filter" data-name="javascript">
+                  <div class="work">
+                    <img src="assests/img/Copilot_20250723_195503.png" />
+
+                    <div class="layer">
+                      <h2>Mentor Connect</h2>
+                      <a href="#"
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></a>
+                      <a href="https://github.com/ritesh7570/MentorConnect"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- card Body------------------------------------------------- -->
+                  <div class="card-body">
+                    <h5 class="card-title">Node</h5>
+                    <h5 class="card-title">Ejs</h5>
+                    <p class="card-text">
+                      Mentor Connect is a platform designed to connect students with mentors, offering features like group and personal mentorship, gamified quizzes, and real-time chat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- JAVASCRIPT PROJECTS ------------------------------------------------------------------ -->
+              <div class="swiper-slide">
+                <div class="card_filter" data-name="react">
+                  <!-- card features  -->
+                  <div class="work">
+                    <img src="assests/img/skill.png" />
+
+                    <div class="layer">
+                      <h2>Skill Swap</h2>
+                      <a href="#"
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></a>
+                      <a href="#"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- card Body------------------------------------------------- -->
+                  <div class="card-body">
+                    <h5 class="card-title">React</h5>
+                    <p class="card-text">
+                     Skill Buddy is a platform that helps users connect and collaborate to learn new skills, featuring peer-to-peer sessions, progress tracking, and interactive challenges.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="swiper-slide">
+                <div class="card_filter" data-name="react">
+                  <!-- card features  -->
+                  <div class="work">
+                    <img src="assests/img/joker2.jpeg" />
+
+                    <div class="layer">
+                      <h2>EV Dashboard</h2>
+                      <a href="#"
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></a>
+                      <a href="https://github.com/ritesh7570/EV_project"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- card Body------------------------------------------------- -->
+                  <div class="card-body">
+                    <h5 class="card-title">React</h5>
+                      <h5 class="card-title">Chart.js</h5>
+                    <p class="card-text">
+                      EV Dashboard is a web application that provides real-time data and analytics for electric vehicles, helping users monitor their vehicle's performance and efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="card_filter" data-name="javascript">
+                  <!-- card features  -->
+                  <div class="work">
+                    <img src="assests/img/Screenshot 2025-07-30 222636.png" />
+
+                    <div class="layer">
+                      <h2>Personal PortFolio</h2>
+                      <a href="#"
+                        ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                      ></a>
+                      <a href="_"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                  </div>
+
+                  <!-- card Body------------------------------------------------- -->
+                  <div class="card-body">
+                    <h5 class="card-title">Javascript</h5>
+                    <p class="card-text">
+                      It is a digital space where i feel free to express myself, i showcase my skills, projects, and professional background as potential employee 
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+
+        <div class="others-proj">
+          <a href="https://github.com/ritesh7570"target="_blank">Click for Visit Other Projects...</a>
+        </div>
+      </div>
+    </section>
+    <hr class="rounded">
+
+    <!-- javascript for Filteration--------------------------------- -->
+    <script>
+      const filterablebuttons = document.querySelectorAll(".proj-links span");
+      const filtercards = document.querySelectorAll(
+        ".filterable-cards .card_filter"
+      );
+      console.log(filterablebuttons, filtercards);
+
+      //Add filtarable function -----------------------
+      const filter_cards = (e) => {
+        document.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+        console.log(e.target);
+
+        //itearte over each filter class--------------------
+        filtercards.forEach((card_filter) => {
+          card_filter.classList.add("hide");
+          //check if the card matches the selected filter or "all" is selected
+          if (
+            card_filter.dataset.name === e.target.dataset.name ||
+            e.target.dataset.name === "all"
+          ) {
+            card_filter.classList.remove("hide");
+          }
+        });
+      };
+
+      //   Add click features -------------
+      filterablebuttons.forEach((span) =>
+        span.addEventListener("click", filter_cards)
+      );
+    </script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        keyboard: {
+          enabled: true,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+
+
+
+<!-- CONTACT SECTION ===================================================================================== -->
+ 
+        <section class="contact" id="contact">
+          <div class="contact-content section-content">
+            <h2 class="section-subtitle texth1">Get in Touch</h2><span class="texth">📲</span>
+            <p class="section-text">
+              Submit the form or shoot me an email - ritesh7882@gmail.com and I'll get back to you promptly.
+            </p>
+
+            <ul class="contact-list">
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Address:</h3>
+
+                  <div class="contact-info">
+                    <a href="https://maps.app.goo.gl/SzhKGyj1e7LREF4V6" target="_blank">Patna,Bihar</a>
+                    
+                  </div>
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Phone:</h3>
+
+                  <a href="tel:7970580759" class="contact-info"
+                    >(91) 7970580759</a
+                  >
+
+            
+                </div>
+              </li>
+
+              <li class="contact-list-item">
+                <div class="contact-item-icon">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div class="wrapper">
+                  <h3 class="h4 contact-item-title">Email:</h3>
+
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=ritesh7882@gmail.com.com"
+                    class="contact-info"
+                    target="_blank"
+                    >ritesh7882@gmail.com</a>
+                  
+
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&to=ritesh.kumar.it26@heritageit.edu.in"
+                    class="contact-info"
+                    target="_blank"
+                    >ritesh.kumar.it26@heritageit.edu.in</a
+                  >
+                  
+                </div>
+              </li>
+                </ul>
+
+              <!-- SOCIAL LINKS ====================== -->
+               <div class="icons">
+                        <a href=""><i class="fa-brands fa-facebook "></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin" ></i></a>
+                        <a href=""><i class="fa-brands fa-instagram" ></i></a>
+                        <a href=""><i class="fa-brands fa-square-github" ></i></a>
+
+                    </div>
+
+
+                    <a href="https://drive.google.com/file/d/1RcOhpFxFIEs1eu1ugQsk7yKKKpgj6FbR/view?usp=drive_link" download class="btn btn2 bcen" style="color: #fff;">Download CV</a>
+
+          
+          </div>
+<!-- Contact Form -------- -->
+          <form action="" class="contact-form" id="contact-form">
+
+            <div class="form-wrapper">
+              <label for="name" class="form-label">Name</label>
+
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  required
+                  placeholder="Your Name"
+                  class="input-field"
+                />
+
+                <i class="fa-solid fa-person" style="color: #9E9E9E;"></i>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label for="email" class="form-label">Email</label>
+
+              <div class="input-wrapper">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="name@gmail.com"
+                  class="input-field"
+                />
+
+                <i class="fa-solid fa-envelope" style="color: #9E9E9E;"></i>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label for="phone" class="form-label">Phone</label>
+
+              <div class="input-wrapper">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  required
+                  placeholder="Phone Number"
+                  class="input-field"
+                />
+
+                <i class="fa-solid fa-phone " style="color: #9E9E9E;"></i>
+            </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label for="message" class="form-label">Message</label>
+
+              <div class="input-wrapper">
+                <textarea
+                  name="message"
+                  id="message"
+                  required
+                  placeholder="Write message..."
+                  class="input-field"
+                ></textarea>
+
+                <i class="fa-solid fa-comments" style="color: #9E9E9E;"></i>
+              </div>
+            </div>
+
+            <div id="custom-loader-wrapper">
+              <div class="custom-loader"></div>
+            </div>
+
+            <button type="submit" id="submitButton" class="btn btn-primary bcen">
+              Let's Collaborate
+            </button>
+          </form>
+        </section>
+
+        <hr class="rounded">
+      
+
+
+
+
+<!-- BUTTON FOR TOP OF THE PAGE ============================================================= -->
+     <button id="back-to-top" onclick="scrollToTop()"><i class="fa-solid fa-arrow-up"></i></button>
+
+     <script>
+        // script.js
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    const button = document.getElementById("back-to-top");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+     </script>
+
+<!-- FOOTER SECTION ======================================================================================== -->
+ <footer>
+
+     <div class="copyright">
+        <div class="thanks">Thanks for visiting and Happy coding! 💻</div>
+        <div>© 2024 Copyright : Ritesh kumar</div>
+          <!-- <p class="profile-views copyright">
+          Profile Visits: <span id="viewCount">0</span>
+        </p> -->
+         
+     </div>
+ </footer>
+
+
+<!-- SCROLL REVEAL ========================================================================================== -->
+ <!-- <script src="https://unpkg.com/scrollreveal"></script>
+ <script>
+    ScrollReveal({ 
+        distance:'true',
+        duration:2000,
+        delay:200,
+     });
+
+     ScrollReveal().reveal('.left-main texth1', { origin:'top' });
+    //  ScrollReveal().reveal('.left-main texth1', { origin:'top' });
+
+ </script> -->
+
+ 
+ <script src="script.js"></script>
+    
+</body>
+</html>
